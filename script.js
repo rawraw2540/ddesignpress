@@ -1,22 +1,3 @@
-// Mobile Navigation Toggle
-const burger = document.getElementById('burger');
-const navWrapper = document.querySelector('.nav-wrapper');
-
-burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    navWrapper.classList.toggle('active');
-    document.body.style.overflow = burger.classList.contains('active') ? 'hidden' : '';
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link, .nav-cta').forEach(link => {
-    link.addEventListener('click', () => {
-        burger.classList.remove('active');
-        navWrapper.classList.remove('active');
-        document.body.style.overflow = '';
-    });
-});
-
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -41,6 +22,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Bottom Navigation Active State
+function updateBottomNavActiveState() {
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.bottom-nav-item');
+    
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('data-section') === current) {
+            item.classList.add('active');
+        }
+    });
+}
+
+// Update active state on scroll
+window.addEventListener('scroll', updateBottomNavActiveState);
+
+// Update active state on page load
+document.addEventListener('DOMContentLoaded', updateBottomNavActiveState);
 
 // FAQ Accordion
 function toggleFAQ(element) {
@@ -111,14 +121,6 @@ if (contactForm) {
         window.location.href = mailtoLink;
     });
 }
-
-// Keyboard navigation for burger menu
-burger.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        burger.click();
-    }
-});
 
 // Add animation on scroll
 const observerOptions = {
