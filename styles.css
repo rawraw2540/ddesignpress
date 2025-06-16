@@ -313,7 +313,7 @@ nav {
     height: auto;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-lg);
-    max-height: 400px;
+    max-height: 550px;
     object-fit: cover;
 }
 
@@ -326,7 +326,7 @@ nav {
     border-radius: var(--border-radius-sm);
     box-shadow: var(--shadow-lg);
     text-align: center;
-    transform: scale(0.67);
+    transform: scale(0.85);
     transform-origin: top right;
 }
 
@@ -1108,12 +1108,12 @@ footer {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    
+
     .footer-brand {
         max-width: 100%;
         margin: 0 auto; /* Zentriert den Container */
     }
-    
+
     .footer-brand img {
         margin: 0 auto 1rem; /* Zentriert das Logo */
     }
