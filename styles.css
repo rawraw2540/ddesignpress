@@ -346,6 +346,24 @@ nav {
     color: var(--text-gray);
 }
 
+/* ADD URGENCY BAR STYLES */
+.urgency-bar {
+    background-color: var(--secondary-red);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.urgency-bar p {
+    margin: 0;
+    color: white;
+    font-size: 1rem;
+}
+
+.urgency-bar strong {
+    font-weight: 600;
+}
+
 /* =====================================================
    CONTENT SECTIONS
    ===================================================== */
@@ -600,6 +618,82 @@ nav {
     color: rgba(255,255,255,0.9);
 }
 
+/* ADD LEAD MAGNET STYLES */
+.lead-magnet-section {
+    background-color: var(--primary-ivory);
+    padding: 60px 0;
+}
+
+.lead-magnet-box {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+}
+
+.lead-magnet-box h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.lead-magnet-box ul {
+    list-style: none;
+    text-align: left;
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+.lead-magnet-box li {
+    padding: 0.5rem 0;
+    color: var(--text-gray);
+}
+
+.lead-magnet-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 2rem auto 0;
+}
+
+.lead-magnet-form input {
+    flex: 1;
+    padding: 14px 20px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius-lg);
+    font-size: 16px;
+}
+
+.lead-magnet-form button {
+    padding: 14px 28px;
+    background-color: var(--secondary-red);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-lg);
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.lead-magnet-form button:hover {
+    background-color: #e63939;
+    transform: translateY(-2px);
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+    .lead-magnet-form {
+        flex-direction: column;
+    }
+
+    .lead-magnet-form button {
+        width: 100%;
+    }
+}
+
 /* FAQ Section */
 .faq-section {
     background-color: var(--white);
@@ -647,12 +741,13 @@ nav {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    padding: 0 2rem;
+    padding: 0;
 }
 
 .faq-item.active .faq-answer {
     max-height: 300px;
-    padding: 0 2rem 1.75rem;
+    padding: 0 2rem 1.75rem 2rem;
+    background-color: var(--white);
 }
 
 .faq-item.active .faq-arrow {
@@ -776,7 +871,7 @@ nav {
     border-radius: var(--border-radius-sm);
     font-family: inherit;
     transition: var(--transition);
-    background-color: var(--gray-light);
+    background-color: var(--primary-almost-white);
     font-size: 15px;
 }
 
@@ -792,6 +887,7 @@ nav {
     resize: vertical;
     min-height: 120px;
 }
+
 
 /* =====================================================
    FOOTER
@@ -1174,3 +1270,32 @@ footer {
 .skip-link:focus {
     top: 0;
 }
+
+
+ /* WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .whatsapp-button svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
