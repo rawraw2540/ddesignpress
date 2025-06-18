@@ -3,629 +3,1633 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Maßgeschneidertes Webdesign für Macher | ddesignpress">
-    <meta name="description" content="Webseiten ohne Baukasten – ddesignpress entwickelt ehrlichen Code & starkes Design für Selbstständige, Coaches und KMU in der gesamten DACH-Region.">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="de">
+    <meta name="description" content="HYLA Luft- und Raumreinigung in Stuttgart - Erlebe ein gesünderes Zuhause mit persönlicher Beratung von Sabrina Wolf">
+    <meta name="keywords" content="HYLA Stuttgart, Luftreiniger, Wasserfilter, Allergiker, Sabrina Wolf">
+    <title>HYLA Stuttgart | Sabrina Wolf - Deine persönliche Beraterin für gesunde Raumluft</title>
 
-    <title>Maßgeschneidertes Webdesign für Macher | ddesignpress</title>
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Sabrina Wolf - HYLA Beraterin",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Schloßstraße 73",
+            "addressLocality": "Stuttgart",
+            "postalCode": "70176",
+            "addressCountry": "DE"
+        },
+        "telephone": "+49 176 20114358",
+        "email": "sabrinamurkett@yahoo.de",
+        "url": "https://www.hyla-sabrinawolf.de"
+    }
+    </script>
 
-    <!-- CSS einbinden -->
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ========================================
+           0. Local Font Definitions
+           ======================================== */
+
+        /* Montserrat Font Family */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url('./fonts/montserrat-v30-latin-300.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('./fonts/montserrat-v30-latin-regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url('./fonts/montserrat-v30-latin-500.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url('./fonts/montserrat-v30-latin-600.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            src: url('./fonts/montserrat-v30-latin-800.woff2') format('woff2');
+        }
+
+        /* Playfair Display Font Family */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('./fonts/playfair-display-v39-latin-regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url('./fonts/playfair-display-v39-latin-700.woff2') format('woff2');
+        }
+
+        /* ========================================
+           1. CSS Variables & Reset
+           ======================================== */
+        :root {
+            /* Farben */
+            --color-primary-pink: #ffeef5;
+            --color-light-beige: #f9f7e5;
+            --color-soft-blue: #eaf4f4;
+            --color-soft-purple: #fceff9;
+            --color-white: #ffffff;
+            --color-black: #1a1a1a;
+            --color-text: #4a4a4a;
+            --color-text-light: #6a6a6a;
+            --color-accent: #d4a574;
+            --color-accent-dark: #b8935f;
+
+            /* Schriften */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+
+            /* Abstände */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 4rem;
+            --spacing-xxl: 6rem;
+
+            /* Container */
+            --max-width: 1200px;
+
+            /* Transitions */
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 300;
+            line-height: 1.7;
+            color: var(--color-text);
+            background-color: var(--color-white);
+            overflow-x: hidden;
+        }
+
+        /* ========================================
+           2. Typography
+           ======================================== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 400;
+            line-height: 1.3;
+            color: var(--color-black);
+            margin-bottom: var(--spacing-md);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 3vw, 2rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+
+        p {
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.1rem;
+            color: var(--color-text);
+        }
+
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--color-accent-dark);
+        }
+
+        /* ========================================
+           3. Layout Components
+           ======================================== */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .section {
+            padding: var(--spacing-xxl) 0;
+            position: relative;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+
+        .two-column.reverse {
+            direction: rtl;
+        }
+
+        .two-column.reverse > * {
+            direction: ltr;
+        }
+
+        /* ========================================
+           4. Navigation
+           ======================================== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        nav {
+            padding: var(--spacing-sm) 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--color-black);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+        }
+
+        .nav-menu a {
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--color-text);
+            padding: var(--spacing-xs) 0;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--spacing-xs);
+        }
+
+        .mobile-menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--color-black);
+            margin: 5px 0;
+            transition: var(--transition);
+        }
+
+        /* ========================================
+           5. Buttons
+           ======================================== */
+        .button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-radius: 50px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+
+        .button-primary {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+        }
+
+        .button-primary:hover {
+            background-color: var(--color-accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
+        }
+
+        .button-outline {
+            background-color: transparent;
+            color: var(--color-accent);
+            border: 2px solid var(--color-accent);
+        }
+
+        .button-outline:hover {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+        }
+
+        .button-group {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+
+        /* ========================================
+           6. Hero Section
+           ======================================== */
+        #hero {
+            background-color: var(--color-primary-pink);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .hero-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+                position: relative;
+                overflow: hidden;
+                border-radius: 20px;
+                box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+                max-width: 650px;
+                width: 150%;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ========================================
+           7. About Section
+           ======================================== */
+        #about {
+            background-color: var(--color-soft-blue);
+        }
+
+        .about-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-image img {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+                position: relative;
+                overflow: hidden;
+                border-radius: 20px;
+                box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+                max-width: 650px;
+                width: 150%;
+        }
+
+        .about-content h2 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .about-content p {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .instagram-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            margin-top: var(--spacing-md);
+            font-weight: 500;
+            color: var(--color-accent);
+        }
+
+        /* ========================================
+           8. Features Section
+           ======================================== */
+        #features {
+            background-color: var(--color-light-beige);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .feature-card {
+            background-color: var(--color-white);
+            padding: var(--spacing-lg);
+            border-radius: 20px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto var(--spacing-md);
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .feature-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        /* ========================================
+           9. Story Sections
+           ======================================== */
+        .story-section {
+            padding: var(--spacing-xxl) 0;
+        }
+
+        .story-section:nth-child(odd) {
+            background-color: var(--color-soft-blue);
+        }
+
+        .story-section:nth-child(even) {
+            background-color: var(--color-soft-purple);
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+
+        .story-text h3 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .story-image {
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .story-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .story-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* ========================================
+           10. Benefits Section
+           ======================================== */
+        #benefits {
+            background-color: var(--color-soft-purple);
+        }
+
+        .benefits-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xxl);
+        }
+
+        .benefits-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .benefits-row.reverse {
+            grid-template-columns: 1fr 2fr;
+            direction: rtl;
+        }
+
+        .benefits-row.reverse > * {
+            direction: ltr;
+        }
+
+        .benefit-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .benefit-item {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: var(--spacing-md);
+            border-radius: 15px;
+            transition: var(--transition);
+        }
+
+        .benefit-item:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            transform: translateX(10px);
+        }
+
+        .benefit-item h3 {
+            font-size: 1.25rem;
+            color: var(--color-accent);
+            margin-bottom: var(--spacing-xs);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+
+        .benefit-item h3::before {
+            content: '✓';
+            font-size: 1.5rem;
+            color: var(--color-accent);
+        }
+
+        .benefit-item p {
+            padding-left: calc(1.5rem + var(--spacing-xs));
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .benefits-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .benefits-image img {
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+        }
+
+        /* ========================================
+           11. Transformation Section
+           ======================================== */
+        #transformation {
+            background-color: var(--color-white);
+        }
+
+        /* ========================================
+           12. Quiz Section
+           ======================================== */
+        #quiz {
+            background-color: var(--color-light-beige);
+            text-align: center;
+        }
+
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quiz-iframe-wrapper {
+            position: relative;
+            padding-top: 56.25%;
+            margin-top: var(--spacing-lg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .quiz-iframe-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .quiz-fallback {
+            background-color: var(--color-primary-pink);
+            padding: var(--spacing-md);
+            border-radius: 15px;
+            margin-top: var(--spacing-md);
+        }
+
+        /* ========================================
+           13. FAQ Section
+           ======================================== */
+        #faq {
+            background-color: var(--color-soft-blue);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--color-white);
+            margin-bottom: var(--spacing-sm);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-question {
+            padding: var(--spacing-md);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background-color: var(--color-primary-pink);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 300;
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 var(--spacing-md);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 var(--spacing-md) var(--spacing-md);
+            max-height: 500px;
+        }
+
+        /* ========================================
+           14. Partner Section
+           ======================================== */
+        #partner {
+            background-color: var(--color-white);
+        }
+
+        .partner-grid {
+            display: grid;
+            gap: var(--spacing-xxl);
+        }
+
+        .partner-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+
+        .partner-intro-content h2 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .partner-intro-image {
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .partner-intro-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .partner-team {
+            margin-top: var(--spacing-xxl);
+            padding-top: var(--spacing-xxl);
+            border-top: 2px solid var(--color-soft-blue);
+        }
+
+        .partner-team-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+
+        .partner-team-layout.reverse {
+            direction: rtl;
+        }
+
+        .partner-team-layout.reverse > * {
+            direction: ltr;
+        }
+
+        .partner-benefits {
+            list-style: none;
+            margin: var(--spacing-md) 0;
+        }
+
+        .partner-benefits li {
+            padding: var(--spacing-sm) 0;
+            padding-left: var(--spacing-lg);
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .partner-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .partner-team-image {
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .partner-team-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 4/5;
+        }
+
+        /* ========================================
+           15. Contact Section
+           ======================================== */
+        #contact {
+            background-color: var(--color-primary-pink);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--color-white);
+            padding: var(--spacing-xl);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: var(--spacing-xs);
+            font-weight: 500;
+            color: var(--color-black);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #f0f0f0;
+            border-radius: 10px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition);
+            background-color: #fafafa;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            background-color: var(--color-white);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-xs);
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 0.3rem;
+        }
+
+        .checkbox-group label {
+            font-size: 0.9rem;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: var(--spacing-xl);
+        }
+
+        .contact-info p {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        /* ========================================
+           16. Fazit Section
+           ======================================== */
+        .fazit-section {
+            background-color: var(--color-soft-blue);
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+        }
+
+        .fazit-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-lg);
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .fazit-container h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-accent);
+        }
+
+        .fazit-container p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--color-text);
+        }
+
+        .fazit-button {
+            margin-top: var(--spacing-lg);
+        }
+
+        /* ========================================
+           17. Footer
+           ======================================== */
+        footer {
+            background: linear-gradient(135deg, var(--color-black) 0%, #2a2a2a 100%);
+            color: var(--color-white);
+            padding: var(--spacing-xl) 0 var(--spacing-md);
+        }
+
+        .footer-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-white);
+            transform: translateY(-2px);
+        }
+
+        .footer-info {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-info p {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        /* ========================================
+           18. WhatsApp Button
+           ======================================== */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .whatsapp-button svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        /* ========================================
+           19. Responsive Design
+           ======================================== */
+        @media (max-width: 768px) {
+            /* Navigation */
+            .nav-menu {
+                position: fixed;
+                top: 60px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 60px);
+                background-color: var(--color-white);
+                flex-direction: column;
+                padding: var(--spacing-lg) var(--spacing-md);
+                transition: var(--transition);
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            /* Grid Layouts */
+            .two-column,
+            .story-content,
+            .partner-intro,
+            .partner-team-layout {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .two-column.reverse,
+            .partner-team-layout.reverse {
+                direction: ltr;
+            }
+
+            /* Hero */
+            #hero {
+                min-height: auto;
+                padding: var(--spacing-xl) 0;
+            }
+
+            /* About */
+            .about-image img {
+                width: 300px;
+                height: 300px;
+            }
+
+            /* Features */
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Benefits */
+            .benefits-row {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-row.reverse {
+                direction: ltr;
+            }
+
+            .benefits-image {
+                margin: var(--spacing-md) 0;
+            }
+
+            /* Buttons */
+            .button-group {
+                justify-content: center;
+            }
+
+            /* Typography */
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            /* Spacing */
+            .section {
+                padding: var(--spacing-xl) 0;
+            }
+        }
+
+        /* ========================================
+           20. Animations
+           ======================================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+    </style>
 </head>
 <body>
-    <!-- Skip to content for accessibility -->
-    <a href="#main" class="skip-link">Zum Hauptinhalt springen</a>
-
-    <!-- Header -->
+    <!-- Header & Navigation -->
     <header>
-        <nav class="container" role="navigation" aria-label="Hauptnavigation">
-            <div class="logo">
-                <a href="#home">
-                    <img src="images/logo.png" alt="ddesignpress">
-                </a>
-            </div>
-            <div class="nav-wrapper">
+        <nav>
+            <div class="container">
+                <div class="logo">Sabrina Wolf</div>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="#services" class="nav-link">Leistungen</a></li>
-                    <li><a href="#showcase" class="nav-link">Projekte</a></li>
-                    <li><a href="#pricing" class="nav-link">Preise</a></li>
-                    <li><a href="#faq" class="nav-link">FAQ</a></li>
-                    <li><a href="#cta" class="nav-link">Über uns</a></li>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">Über mich</a></li>
+                    <li><a href="#features">Family Gamechanger</a></li>
+                    <li><a href="#story">HYLA</a></li>
+                    <li><a href="#partner">Team</a></li>
+                    <li><a href="#quiz">Quiz</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
                 </ul>
-                <a href="#contact" class="nav-cta">Jetzt Kontaktieren</a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menü öffnen">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main id="main">
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-container">
-                    <div class="hero-content">
-                        <h1>Webdesign für <span class="highlight">Macher</span>, nicht für Manager.</h1>
-                        <p class="subline">
-                            ddesignpress baut dir keine Online-Visitenkarte –
-                            <a href="#services">sondern ein Werkzeug, das für dich arbeitet</a>.
-                        </p>
-                        <div class="hero-buttons">
-                            <a href="#contact" class="btn">Jetzt Projekt starten</a>
-                            <a href="#showcase" class="btn btn-secondary">Projekte ansehen</a>
-                        </div>
-                    </div>
-                    <div class="hero-image">
-                        <img src="images/webentwicklungstuttgart.jpg" alt="Webentwicklung Stuttgart - Arbeitsplatz">
-                        <div class="hero-badge">
-                            <span class="number">50+</span>
-                            <span class="text">Projekte realisiert</span>
-                        </div>
+    <!-- Section 1: Hero -->
+    <section id="hero" class="section">
+        <div class="container">
+            <div class="two-column">
+                <div class="hero-content">
+                    <h1>Tausche ineffizientes Putzen gegen Leichtigkeit & wertvolle Zeit für Dich und deine Familie! </h1>
+                    <p>Willkommen in deiner Wohlfühlzone! Der HYLA EST ist viel mehr als ein Staubsauger – er ist ein innovatives Luft- und Reinigungs­System, das mit der Kraft von Wasser und Wirbeltechnik dein Zuhause nicht nur sichtbar, sondern auch spürbar sauberer macht.
+                        Ob du Staub, Allergene, Tierhaare, Gerüche oder hartnäckigen Schmutz loswerden willst – der HYLA filtert alles direkt ins Wasser. Keine Beutel. Kein Staubauswurf. Keine Kompromisse.
+                        Dabei reinigt er nicht nur Böden, Matratzen und Polster porentief, sondern auch die Luft, die du und deine Familie atmet – ganz ohne Chemie.
+                        Perfekt für Familien, Allergiker, Tierbesitzer und alle, die sich mehr Leichtigkeit im Alltag wünschen.
+                        Und das Beste: Der HYLA vereint über 30 Anwendungen in nur einem Gerät  – und wird so zum praktischen Alltagshelden für dein Zuhause!</p>
+                    <div class="button-group">
+                        <a href="https://223890.hyla-germany.de/de" class="button button-primary" target="_blank">Jetzt kaufen</a>
+                        <a href="#contact" class="button button-outline">Kostenlose Beratung</a>
                     </div>
                 </div>
+                <div class="hero-image">
+                    <img src="/images/Sabrina1.jpeg" alt="HYLA Reinigungssystem in Aktion">
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Services Section -->
-        <section id="services" class="section content-section">
-            <div class="container">
-                <h2 class="section-title">Was du bekommst</h2>
-                <p class="section-subtitle">Klare Kommunikation, saubere Umsetzung, ein Ergebnis das für dich arbeitet.</p>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="16 18 22 12 16 6"></polyline>
-                            <polyline points="8 6 2 12 8 18"></polyline>
+    <!-- Section 2: About -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="two-column">
+                <div class="about-image">
+                    <img src="/images/erstbildunddanntext.jpeg" alt="Sabrina Wolf - HYLA Beraterin">
+                </div>
+                <div class="about-content">
+                    <h2>💫 Meine HYLA-Geschichte – von Staubfrust zu Lebenslust</h2>
+                    <p>Ich bin Sabrina – Mama, Mentorin und jemand mit einem kleinen inneren „Monk", wenn es um Sauberkeit geht. Als zweifache Mama weiß ich, wie schnell der Alltag zwischen Familienchaos, Job und Haushalt überfordernd werden kann – besonders, wenn man den Anspruch hat, es zuhause hygienisch und gemütlich zu halten.</p>
+                    <p>Nach der Geburt meines zweiten Sohnes wurde mir bewusst, wie stark unsichtbarer Schmutz unseren Alltag beeinflusst: Der Teppich wirkt oberflächlich sauber, doch ich habe mich unwohl gefühlt, wenn mein Baby darauf gespielt hat. Staub, Milben, Tierhaare – gefühlt war alles da, trotz regelmäßigem Saugen.</p>
+                    <p>Ich habe mich nach einer Lösung gesehnt, die nicht nur oberflächlich reinigt, sondern tiefenrein und gleichzeitig gesundheitsschonend wirkt – ganz ohne Chemie. Nachdem ich den Hyla über einige Monate verfolgt und recherchiert hatte, habe ich mich entschlossen ihn einfach zu kaufen. Und nachdem ich ihn dann Zuhause getestet hatte, war ich sprachlos. Die Menge an Schmutz und Staub, die sich im Wasser sammelte, obwohl alles „sauber" wirkte – das war verrückt und der Gamechanger für mich.</p>
+                    <p>💭 Das war auch der Moment, in dem ich wusste: <strong>Diesen Unterschied müssen mehr Menschen erleben.</strong></p>
+                    <a href="https://instagram.com/cleanlifestylemum" target="_blank" class="instagram-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
                         </svg>
-                        <h3>Maßgeschneiderte Websites</h3>
-                        <p>Keine Baukästen, keine Plugins. Nur sauberer, der genau das macht, was dein Business braucht.</p>
+                        Folge mir @cleanlifestylemum
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Transformation -->
+    <section id="transformation" class="section">
+        <div class="container">
+            <div class="two-column">
+                <div class="partner-content">
+                    <h2>🚀 Vom begeisterten Kunden zur selbstständigen Vertriebspartnerin</h2>
+                    <p>Ich habe den HYLA zuerst für meine Familie gekauft, aber ehrlich gesagt auch direkt gedacht: Das ist mehr als ein Reinigungsgerät – das ist ein echtes Werkzeug für mehr Wohlbefinden, Zeitersparnis und Leichtigkeit im Mama-Alltag.</p>
+                    <p>Und weil ich den Wunsch hatte, mir während der Elternzeit etwas Eigenes aufzubauen – etwas, das zu mir passt und Sinn ergibt, war der Schritt in die Selbstständigkeit mit HYLA für mich ganz natürlich.</p>
+                    <p>Heute darf ich nicht nur Familien zeigen, wie sie ihr Zuhause spürbar gesünder gestalten, sondern auch Frauen begleiten, die wie ich mehr Freiheit und Erfüllung im Leben wollen – ohne sich zwischen Familie und Beruf zerreißen zu müssen.</p></p>
+                    <p>💬 Meine Mission: Ich helfe dir, dein Zuhause sauberer und gesünder zu machen – und wenn du willst, zeige ich dir auch, wie du mit dem HYLA dein eigenes Herzensbusiness starten kannst.</p>
+                    <a href="#contact" class="button button-primary">Weitere Informationen</a>
+                </div>
+                <div class="partner-image">
+                    <img src="/images/sabrinahyla.jpeg" alt="HYLA Vertriebspartner werden">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Benefits -->
+    <section id="benefits" class="section">
+        <div class="container">
+            <h2 style="text-align: center;">Wie der HYLA dein Familienleben verändern kann</h2>
+            <div class="benefits-wrapper">
+                <!-- Erste Reihe: Links die ersten 4 Punkte, rechts Bild -->
+                <div class="benefits-row">
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <h3>Reinigt mit der Kraft der Natur</h3>
+                            <p>Das einzigartige Wasserfiltersystem des HYLA orientiert sich am Vorbild der Natur – ganz ohne Beutel oder Chemie. Es bindet Staub, Allergene, Bakterien und Gerüche sicher im Wasser und sorgt für spürbar bessere Luftqualität in deinem Zuhause.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <h3>Raus aus dem Putz-Teufelskreis</h3>
+                            <p>Durch die kontinuierliche Luftwäsche wird Hausstaub spürbar reduziert – so musst du weniger wischen und staubsaugen. Weniger Aufwand – mehr Wohlgefühl!</p>
+                        </div>
+                        <div class="benefit-item">
+                            <h3>Sichtbar sauber. Spürbar gesünder.</h3>
+                            <p>Ob Böden, Matratzen oder Polster – der HYLA reinigt tiefenwirksam mit klarem Wasser und ersetzt viele chemische Reiniger in deinem Alltag.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <h3>Helle Möbel? Kein Problem mehr!</h3>
+                            <p>Endlich unbesorgt mit Kindern oder Haustieren wohnen – auch mit heller Einrichtung. Der HYLA entfernt selbst feinen Staub und Tierhaare gründlich und hygienisch.</p>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                        </svg>
-                        <h3>Mobile First Design</h3>
-                        <p>Responsive, schnell und benutzerfreundlich auf jedem Gerät. Performance steht im Mittelpunkt.</p>
+                    <div class="benefits-image">
+                        <img src="/images/sabrinahyla.jpeg" alt="HYLA Benefits">
                     </div>
-                    <div class="service-card">
-                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <h3>SEO-Optimiert</h3>
-                        <p>Von Grund auf für Suchmaschinen optimiert. Sauberer Code bedeutet bessere Rankings.</p>
+                </div>
+
+                <!-- Zweite Reihe: Links Bild, rechts die letzten 3 Punkte -->
+                <div class="benefits-row reverse">
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <h3>Mehr Zeit durch weniger Aufwand</h3>
+                            <p>Saugen und Wischen in einem Schritt, Luftreinigung ganz nebenbei – der HYLA spart dir wertvolle Zeit und vereint mehrere Geräte in einem.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <h3>Raum für dich – und neue Möglichkeiten</h3>
+                            <p>Was als Hilfe im Haushalt begann, wurde für mich zum beruflichen Neuanfang. Als selbstständige HYLA-Beraterin helfe ich heute anderen Mamas, sich finanziell unabhängig und frei von Druck ein Herzensbusiness aufzubauen.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <h3>Gesünder leben – für die ganze Familie</h3>
+                            <p>Nachweislich weniger Allergene, Schadstoffe, Viren und Bakterien in der Luft. So schaffst du eine gesunde Wohlfühlumgebung – besonders für Kinder, Allergiker und Haustierhaushalte.</p>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
-                        <h3>DSGVO-Konform</h3>
-                        <p>Keine unnötigen Cookies, kein Tracking-Wahnsinn. Datenschutz by Design.</p>
-                    </div>
-                    <div class="service-card">
-                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                        </svg>
-                        <h3>Performance First</h3>
-                        <p>Schnelle Ladezeiten sind kein Zufall. Optimiert bis ins kleinste Detail.</p>
-                    </div>
-                    <div class="service-card">
-                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                        </svg>
-                        <h3>Volle Kontrolle</h3>
-                        <p>Du bekommst den kompletten Code. Keine Abhängigkeiten, keine monatlichen Gebühren.</p>
+                    <div class="benefits-image">
+                        <img src="/images/Sabrina2.jpeg" alt="HYLA Family Benefits">
                     </div>
                 </div>
             </div>
-        </section>
+            <div style="text-align: center; margin-top: var(--spacing-lg);">
+                <a href="https://wa.me/4917620114358" class="button button-primary">Schreib mir</a>
+            </div>
+        </div>
+    </section>
 
-        <!-- Trust Section -->
-        <section class="trust-section">
-            <div class="container">
-                <div class="trust-grid">
-                    <div class="trust-item">
-                        <span class="trust-number">50+</span>
-                        <span class="trust-label">Projekte realisiert</span>
+    <!-- Section 5: Features -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2 style="text-align: center;">Was macht den HYLA so besonders?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="/images/Sabrina2.jpeg" alt="Allergiker-freundlich">
                     </div>
-                    <div class="trust-item">
-                        <span class="trust-number">3</span>
-                        <span class="trust-label">Wochen Ø Projektdauer</span>
+                    <h3>Der Hyla - Ein Gerät, viele Lösungen für dein Zuhause</h3>
+                    <p>Der Hyla EST ist weit mehr als ein Staubsauger - er ist ein innovatives Reinigungssystem, das
+Wasser und Luft nutzt, um dein Zuhause tiefenrein und gesünder zu machen. Ob Böden, Polster, Luft oder sogar das Raumklima - der Hyla unterstützt dich im Familienalltag mit über 30 cleveren Funktionen.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="/images/Sabrina3.jpeg" alt="Tierhaare entfernen">
                     </div>
-                    <div class="trust-item">
-                        <span class="trust-number">100%</span>
-                        <span class="trust-label">Kundenzufriedenheit</span>
+                    <h3>Tiefenreinigung für Matratzen, Teppiche & Polster</h3>
+                    <p>Mit der Ventus-Elektrobürste holt der Hyla selbst tiefsitzenden Schmutz aus deinen Matratzen,
+Teppichen oder Sofas - inklusive Milben, Milbenkot, Hautschuppen und Allergenen. Perfekt für Allergiker und Familien mit kleinen Kindern.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="/images/Sabrina4.jpeg" alt="Aromatherapie">
+                    </div>
+                    <h3>Luftreinigung für gesunde Raumluft</h3>
+                    <p>FDer Hyla filtert Feinstaub, Pollen, Bakterien und Gerüche aus der Luft - ganz ohne Filterwechsel, nur
+mit Wasser. Die gereinigte Luft ist zu 99,67 % frei von Schadstoffen und sorgt für ein frisches Raumklima - wie nach einem Gewitter. Besonders hilfreich bei Allergien, Haustieren oder im Kinderzimmer.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="/images/Sabrina5.jpeg" alt="Ohne Beutel">
+                    </div>
+                    <h3>Saugen und Wischen in einem Schritt</h3>
+                    <p>Mit dem speziellen Wischaufsatz saugst und wischt du zeitgleich - ideal für Laminat, Fliesen oder Parkett. Das spart Zeit und sorgt für hygienische Sauberkeit mit minimalem Aufwand.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="/images/Sabrina6.jpeg" alt="Vielseitig">
+                    </div>
+                    <h3>Fleckenentfernung leicht gemacht</h3>
+                    <p>Die Nimbus-Düse ist dein Retter bei Missgeschicken: Sie saugt Flecken und Flüssigkeiten direkt aus Textilien - ob Milchrückstände auf dem Sofa oder Saft im Autositz. Ganz ohne Chemie, nur mit Wasser.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="/images/Staub3.jpeg" alt="Langlebig">
+                    </div>
+                    <h3>Natürliches Reizklima - wie ein Tag am Meer</h3>
+                    <p>Während der Luftreinigung entsteht ein leicht feuchtes Mikroklima, das die Atemwege befeuchtet und die Schleimhäute schützt - wohltuend bei trockener Heizungsluft oder für Kinder mit sensiblenAtemwegen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fazit Section -->
+    <section class="fazit-section">
+        <div class="fazit-container">
+            <h2>Fazit:</h2>
+            <p>Ob du Zeit sparen, Allergene loswerden oder einfach ein sauberes Zuhause willst - der Hyla ist dein smarter Alltagshelfer. Und das Beste: Alles mit nur einem Gerät - ohne Beutel, ohne Chemie, dafür mit spürbarem Unterschied</p>
+            <div class="fazit-button">
+                <a href="https://wa.me/4917620114358" class="button button-primary">SCHREIB MIR</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Quiz -->
+    <section id="quiz" class="section">
+        <div class="container">
+            <div class="quiz-container">
+                <h2>Welcher Reinigungstyp bist du?</h2>
+                <p>Finde in unserem kurzen Quiz heraus, ob der HYLA zu deinem Lifestyle passt!</p>
+                <div class="quiz-iframe-wrapper">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScs88F7Wdf394lUqPEXWfk8I1JFPCVT8seG18KM2-3TapGD3Q/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
+                </div>
+                <div class="quiz-fallback">
+                    <p>Quiz lädt nicht? <a href="https://docs.google.com/forms/d/e/1FAIpQLScs88F7Wdf394lUqPEXWfk8I1JFPCVT8seG18KM2-3TapGD3Q/viewform" target="_blank">Hier direkt zum Quiz →</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Partner -->
+    <section id="partner" class="section">
+        <div class="container partner-grid">
+            <!-- Partner Intro -->
+            <div class="partner-intro">
+                <div class="partner-intro-content">
+                    <h2>🌟 Werde Teil meines Teams!</h2>
+                    <p>HYLA ist nicht einfach nur ein Staubsaugerhersteller.
+                    Für mich steht HYLA für ein wertschätzendes Unternehmen mit einem hochwertigen Produkt, einem fairen und einfachen Vergütungsplan – ganz ohne Verkaufsdruck, ohne Mindestumsatz und ohne finanzielles Risiko. Dafür aber mit echten Verdienstmöglichkeiten und der Freiheit, deine Zeit und deinen Arbeitsplatz selbst zu gestalten.</p>
+                    <p>Für mich war der HYLA von Anfang an ein Produkt, das mich überzeugt und begeistert hat – und das meinen Familienalltag komplett erleichtert. Gleichzeitig war es für mich die Chance, während meiner Elternzeit meinen Job zu ersetzen und mir ein eigenes Business aufzubauen.</p>
+                    <p>Aus der Vision, ein selbstbestimmtes Business zu führen, ist im ersten Jahr ein noch größerer Wunsch entstanden: Andere Frauen auf dieser Reise zu begleiten – und ihnen die Chance näherzubringen, die auch ich damals ergriffen habe.</p>
+                </div>
+                <div class="partner-intro-image">
+                    <img src="/images/Sabrina2.jpeg" alt="HYLA Team">
+                </div>
+            </div>
+
+            <!-- Partner Team Section -->
+            <div class="partner-team">
+                <div class="partner-team-layout reverse">
+                    <div class="partner-team-content">
+                        <h2>💬 Was du bekommst:</h2>
+                        <ul class="partner-benefits">
+                            <li>Attraktive Provisionen bei jedem Verkauf</li>
+                            <li>Freie Zeiteinteilung – du bestimmst dein Tempo</li>
+                            <li>Ortsunabhängiges Arbeiten – von zuhause oder unterwegs</li>
+                            <li>Umfassende Schulungen & persönliche Begleitung</li>
+                            <li>Selbstverwirklichung & echte Persönlichkeitsentwicklung</li>
+                        </ul>
+                        <p>Starte so, wie es zu dir passt:</p>
+                        <p>Ob als zweites Standbein oder als kompletter Neustart – ich bin an deiner Seite und begleite dich auf deinem Weg.</p>
+                        <p>Du hast nichts zu verlieren – außer die Chance, dir ein freieres Leben aufzubauen. Und das mit einem Produkt, das nicht nur hochwertig, sondern auch wirklich überzeugend ist: dem HYLA</p>
+                        <a href="https://wa.me/4917620114358" class="button button-primary">Schreib mir</a>
+                    </div>
+                    <div class="partner-team-image">
+                        <img src="/images/Sabrina2.jpeg" alt="HYLA Vertriebspartner werden">
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Showcase Section -->
-        <section id="showcase" class="section showcase-section">
-            <div class="container">
-                <div class="showcase-intro">
-                    <h2 class="section-title">Ausgewählte Arbeiten</h2>
-                    <p class="section-subtitle">Unsere Kunden legen Wert auf Diskretion – wir auch. Deshalb zeigen wir hier nur ausgewählte Designbeispiele in anonymisierter Form.</p>
+    <!-- Section 8: FAQ -->
+    <section id="faq" class="section">
+        <div class="container">
+            <h2 style="text-align: center;">Häufig gestellte Fragen</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Wie kann ich den HYLA unverbindlich testen?</div>
+                    <div class="faq-answer">
+                        <p>Ganz einfach! Kontaktiere mich über WhatsApp oder das Kontaktformular. Wir vereinbaren einen kostenlosen Termin bei dir zu Hause, wo ich dir den HYLA ausführlich vorführe – völlig unverbindlich!</p>
+                    </div>
                 </div>
-                <div class="showcase-grid">
-                    <div class="showcase-item">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='280'%3E%3Crect fill='%23f9f5f0' width='400' height='280'/%3E%3Crect fill='%23fc4445' x='0' y='0' width='400' height='70'/%3E%3Ctext x='200' y='45' text-anchor='middle' fill='white' font-family='Arial' font-size='24' font-weight='bold'%3EBusiness Solutions%3C/text%3E%3Crect fill='white' x='20' y='90' width='170' height='100' rx='8'/%3E%3Crect fill='white' x='210' y='90' width='170' height='100' rx='8'/%3E%3Crect fill='%234ac2bf' x='20' y='210' width='360' height='50' rx='25'/%3E%3C/svg%3E" alt="Business Website">
-                        <div class="showcase-overlay">
-                            <h4>Corporate Website</h4>
-                            <p>Modernes B2B-Portal mit klarer Struktur</p>
-                        </div>
+                <div class="faq-item">
+                    <div class="faq-question">Was kostet der HYLA?</div>
+                    <div class="faq-answer">
+                        <p>Der HYLA EST Defender kostet 2.190 € inklusive Elektrobürste. Klingt viel? Bedenke: Ein HYLA hält 10-15 Jahre. Das sind weniger als 50 Cent pro Tag für saubere Luft und ein gesundes Zuhause!</p>
                     </div>
-                    <div class="showcase-item">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='280'%3E%3Crect fill='%23333' width='400' height='280'/%3E%3Ccircle cx='200' cy='80' r='40' fill='%234ac2bf' opacity='0.3'/%3E%3Ccircle cx='200' cy='80' r='30' fill='%234ac2bf' opacity='0.5'/%3E%3Ccircle cx='200' cy='80' r='20' fill='%234ac2bf'/%3E%3Ctext x='200' y='160' text-anchor='middle' fill='%23e2ceb3' font-family='Arial' font-size='28' font-weight='300'%3EMindful Living%3C/text%3E%3Cline x1='50' y1='200' x2='350' y2='200' stroke='%23e2ceb3' stroke-width='1' opacity='0.5'/%3E%3Ctext x='200' y='240' text-anchor='middle' fill='%23999' font-family='Arial' font-size='14'%3ECoaching · Meditation · Growth%3C/text%3E%3C/svg%3E" alt="Coaching Website">
-                        <div class="showcase-overlay">
-                            <h4>Coaching Portal</h4>
-                            <p>Vertrauensvolle Präsenz für Personal Coach</p>
-                        </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Gibt es Finanzierungsmöglichkeiten?</div>
+                    <div class="faq-answer">
+                        <p>Ja! Du kannst per PayPal, Kreditkarte oder Überweisung zahlen. Auch eine bequeme Finanzierung ab 39 €/Monat ist möglich. Sprich mich einfach darauf an!</p>
                     </div>
-                    <div class="showcase-item">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='280'%3E%3Crect fill='white' width='400' height='280'/%3E%3Crect fill='%23f3ebe1' x='0' y='0' width='400' height='140'/%3E%3Ctext x='40' y='50' fill='%23333' font-family='Arial' font-size='32' font-weight='bold'%3ECreative%3C/text%3E%3Ctext x='40' y='80' fill='%23fc4445' font-family='Arial' font-size='32' font-weight='bold'%3EStudio%3C/text%3E%3Crect fill='%23333' x='40' y='170' width='80' height='80' rx='8'/%3E%3Crect fill='%234ac2bf' x='140' y='170' width='80' height='80' rx='8'/%3E%3Crect fill='%23e2ceb3' x='240' y='170' width='80' height='80' rx='8'/%3E%3C/svg%3E" alt="Portfolio Website">
-                        <div class="showcase-overlay">
-                            <h4>Kreativ-Portfolio</h4>
-                            <p>Showcase für Design-Agentur</p>
-                        </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Was ist alles im Lieferumfang enthalten?</div>
+                    <div class="faq-answer">
+                        <p>Du erhältst den HYLA EST Defender, die kraftvolle Elektrobürste und ein umfangreiches Zubehörpaket für alle Reinigungsaufgaben – von Polstern über Fugen bis zu empfindlichen Oberflächen.</p>
                     </div>
-                    <div class="showcase-item">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='280'%3E%3Crect fill='%23f9f5f0' width='400' height='280'/%3E%3Ctext x='200' y='40' text-anchor='middle' fill='%23333' font-family='Arial' font-size='24' font-weight='bold'%3ETechStart%3C/text%3E%3Ccircle cx='100' cy='140' r='40' fill='%234ac2bf' opacity='0.2'/%3E%3Ccircle cx='200' cy='140' r='40' fill='%23fc4445' opacity='0.2'/%3E%3Ccircle cx='300' cy='140' r='40' fill='%23e2ceb3' opacity='0.2'/%3E%3Ctext x='100' y='145' text-anchor='middle' fill='%234ac2bf' font-family='Arial' font-size='24' font-weight='bold'%3E01%3C/text%3E%3Ctext x='200' y='145' text-anchor='middle' fill='%23fc4445' font-family='Arial' font-size='24' font-weight='bold'%3E02%3C/text%3E%3Ctext x='300' y='145' text-anchor='middle' fill='%23e2ceb3' font-family='Arial' font-size='24' font-weight='bold'%3E03%3C/text%3E%3Crect fill='%23333' x='50' y='220' width='300' height='40' rx='20'/%3E%3C/svg%3E" alt="Startup Landing Page">
-                        <div class="showcase-overlay">
-                            <h4>Tech-Startup</h4>
-                            <p>Landing Page für SaaS-Unternehmen</p>
-                        </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Wie aufwendig ist die Pflege?</div>
+                    <div class="faq-answer">
+                        <p>Kinderleicht! Nach jedem Gebrauch einfach das Wasserbad ausleeren und kurz ausspülen. Das war's! Keine Beutel wechseln, keine Filter kaufen.</p>
                     </div>
-                    <div class="showcase-item">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='280'%3E%3Crect fill='%23e8d8c2' width='400' height='280'/%3E%3Crect fill='white' x='20' y='20' width='360' height='80' rx='8'/%3E%3Ctext x='200' y='70' text-anchor='middle' fill='%23333' font-family='Arial' font-size='28' font-weight='bold'%3EMeisterbetrieb%3C/text%3E%3Crect fill='%23fc4445' x='50' y='130' width='130' height='120' rx='8'/%3E%3Crect fill='white' x='220' y='130' width='130' height='50' rx='8'/%3E%3Crect fill='white' x='220' y='200' width='130' height='50' rx='8'/%3E%3C/svg%3E" alt="Handwerker Website">
-                        <div class="showcase-overlay">
-                            <h4>Handwerker-Präsenz</h4>
-                            <p>Professioneller Auftritt für lokales Geschäft</p>
-                        </div>
-                    </div>
-                    <div class="showcase-item">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='280'%3E%3Crect fill='white' width='400' height='280'/%3E%3Crect fill='%23333' x='0' y='0' width='400' height='60'/%3E%3Ctext x='40' y='38' fill='white' font-family='Arial' font-size='20' font-weight='bold'%3EShop%3C/text%3E%3Crect fill='%23fc4445' x='320' y='15' width='60' height='30' rx='15'/%3E%3Crect fill='%23f9f5f0' x='20' y='80' width='170' height='180' rx='8'/%3E%3Crect fill='%23f9f5f0' x='210' y='80' width='170' height='180' rx='8'/%3E%3Crect fill='%234ac2bf' x='40' y='220' width='130' height='20' rx='10'/%3E%3Crect fill='%234ac2bf' x='230' y='220' width='130' height='20' rx='10'/%3E%3C/svg%3E" alt="E-Commerce Website">
-                        <div class="showcase-overlay">
-                            <h4>Online-Shop</h4>
-                            <p>E-Commerce für Premium-Produkte</p>
-                        </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Was ist mit Garantie und Service?</div>
+                    <div class="faq-answer">
+                        <p>Du erhältst die volle Herstellergarantie. Und das Beste: Ich bin auch nach dem Kauf für dich da – mit Tipps, Tricks und persönlicher Betreuung!</p>
                     </div>
                 </div>
             </div>
-        </section>
+            <div style="text-align: center; margin-top: var(--spacing-xl);">
+                <a href="https://223890.hyla-germany.de/de" class="button button-primary" target="_blank">Jetzt im HYLA Shop stöbern</a>
+            </div>
+        </div>
+    </section>
 
-                <!-- Pricing Section -->
-                <section id="pricing" class="section content-section">
-                    <div class="container">
-                        <h2 class="section-title">Investition in deine digitale Zukunft</h2>
-                        <p class="section-subtitle">Transparente Preise, klare Leistungen. Alles inklusive.</p>
-                        <div class="pricing-grid">
-                            <div class="price-card">
-                                <h3 class="price-label">Starter</h3>
-                                <p class="price">ab 750€</p>
-                                <p class="price-description">Perfekt für den professionellen Start</p>
-                                <ul class="price-features">
-                                    <li>One-Page Website</li>
-                                    <li>Mobile optimiert</li>
-                                    <li>SEO-Grundlagen</li>
-                                    <li>Kontaktformular</li>
-                                    <li>DSGVO-konform</li>
-                                </ul>
-                                <a href="#contact" class="btn" style="width: 100%;">Anfrage starten</a>
-                            </div>
-                            <div class="price-card featured">
-                                <h3 class="price-label">Business</h3>
-                                <p class="price">3.000-7.500€</p>
-                                <p class="price-description">Für etablierte Unternehmen</p>
-                                <ul class="price-features">
-                                    <li>Bis zu 10 Unterseiten</li>
-                                    <li>Erweiterte SEO-Optimierung</li>
-                                    <li>Blog-Funktion möglich</li>
-                                    <li>Analytics Integration</li>
-                                    <li>Content Management</li>
-                                </ul>
-                                <a href="#contact" class="btn" style="width: 100%;">Anfrage starten</a>
-                            </div>
-                            <div class="price-card">
-                                <h3 class="price-label">Premium</h3>
-                                <p class="price">ab 7.500€</p>
-                                <p class="price-description">Für komplexe Projekte</p>
-                                <ul class="price-features">
-                                    <li>Individuelle Features</li>
-                                    <li>E-Commerce möglich</li>
-                                    <li>Mehrsprachigkeit</li>
-                                    <li>API-Anbindungen</li>
-                                    <li>Erweiterte Funktionen</li>
-                                </ul>
-                                <a href="#contact" class="btn" style="width: 100%;">Anfrage starten</a>
-                            </div>
+    <!-- Section 9: Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 style="text-align: center;">Lass uns in Kontakt kommen!</h2>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Dein Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Deine E-Mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefonnummer (für Rückfragen)</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Wobei kann ich dir helfen? *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Bitte wählen...</option>
+                            <option value="vor-ort-termin">Kostenlose Vorführung bei mir zu Hause</option>
+                            <option value="video-call">Online-Beratung per Video</option>
+                            <option value="telefonat">Telefonische Beratung</option>
+                            <option value="infos-mail">Informationen per E-Mail</option>
+                            <option value="vertriebspartner">Ich möchte Vertriebspartner werden</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Deine Nachricht an mich</label>
+                        <textarea id="message" name="message" placeholder="Erzähl mir gerne mehr über deine Situation..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="dsgvo" name="dsgvo" required>
+                            <label for="dsgvo">Ich stimme der Verarbeitung meiner Daten gemäß der <a href="#impressum">Datenschutzerklärung</a> zu. *</label>
                         </div>
                     </div>
-                </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="section faq-section">
-            <div class="container">
-                <h2 class="section-title">Häufige Fragen</h2>
-                <div class="faq-container">
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            Welche Technologien setzt ihr ein?
-                            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Wir arbeiten mit modernem HTML5, CSS3 und JavaScript. Keine überladenen Frameworks, kein unnötiger Ballast – nur sauberer, performanter Code, der genau das tut, was er soll.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            Können wir den Code selbst anpassen?
-                            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Absolut! Du erhältst den kompletten Quellcode und kannst ihn jederzeit anpassen. Wir dokumentieren alles sauber, damit du oder dein Team problemlos Änderungen vornehmen könnt.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            Wie sieht der Entwicklungsprozess aus?
-                            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Nach dem Erstgespräch erstellen wir ein Konzept, dann folgt das Design, anschließend die Entwicklung. Du bist bei jedem Schritt dabei und gibst Feedback. Durchschnittlich dauert ein Projekt 4 Wochen.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            Wo wird unsere Website gehostet?
-                            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Das entscheidest du! Wir empfehlen moderne Hosting-Lösungen wie Vercel oder Netlify für optimale Performance. Gerne übernehmen wir auch das Setup und zeigen dir, wie alles funktioniert.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            Nutzt ihr WordPress oder Shopify?
-                            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Nein. Wir bauen maßgeschneiderte Websites ohne CMS-Ballast. Das Ergebnis: Schnellere Ladezeiten, bessere Sicherheit und volle Kontrolle über deinen Code.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            Ist die Website SEO-optimiert?
-                            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Ja! Jede Website wird von Grund auf für Suchmaschinen optimiert: Saubere URL-Struktur, optimierte Meta-Tags, schnelle Ladezeiten und semantisch korrekter Code sind bei uns Standard.</p>
-                        </div>
-                    </div>
+                    <button type="submit" class="button button-primary" style="width: 100%;">Nachricht senden</button>
+                </form>
+                <div class="contact-info">
+                    <p><strong>Oder kontaktiere mich direkt:</strong></p>
+                    <p>WhatsApp: <a href="https://wa.me/4917620114358" target="_blank">+49 176 20114358</a></p>
+                    <p>E-Mail: <a href="mailto:sabrinamurkett@yahoo.de">sabrinamurkett@yahoo.de</a></p>
                 </div>
             </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section id="cta" class="cta-section">
-            <div class="container">
-                <h2>Bereit für deine neue Website?</h2>
-                <p>Lass uns gemeinsam etwas Großartiges erschaffen.</p>
-                <a href="#contact" class="btn">Jetzt Projekt starten</a>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title">Warum ddesignpress?</h2>
-                <div style="max-width: 1000px; margin: 0 auto;">
-                    <div style="text-align: center; margin-bottom: 3rem;">
-                        <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">ddesignpress ist deine digitale Werkbank – für Websites, die verkaufen statt verwalten. Kein CMS-Ballast, keine Templates – nur ehrlicher Code, durchdachtes Design und technische Klarheit.</p>
-                        <p style="font-size: 1.125rem;">Wir sprechen die Sprache von Unternehmern: direkt, klar, ergebnisorientiert. Bei uns bekommst du keine bunten Baukästen, sondern eine Lösung, die läuft.</p>
-                    </div>
-                    <div style="position: relative; overflow: hidden; border-radius: var(--border-radius); box-shadow: var(--shadow-lg); max-width: 800px; margin: 0 auto;">
-                        <img src="images/webdesignstuttgart.jpg" alt="Webdesign Stuttgart - Arbeitsumgebung" style="width: 100%; height: auto; display: block;">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section contact-section">
-            <div class="container">
-                <h2 class="section-title">Lass uns über dein Projekt sprechen</h2>
-                <p class="section-subtitle">Rückmeldung innerhalb 24 Stunden (Mo-Fr 9-18 Uhr)</p>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Direkter Draht</h3>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                                </svg>
-                                <div>
-                                    <p style="margin: 0; font-weight: 500;">Telefon</p>
-                                    <a href="tel:+4917630171028">+49 176 30171028</a>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                                    <path d="m22 7-10 5L2 7"></path>
-                                </svg>
-                                <div>
-                                    <p style="margin: 0; font-weight: 500;">E-Mail</p>
-                                    <a href="mailto:daniel.doerrer@gmail.com">daniel.doerrer@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                    <circle cx="12" cy="10" r="3"></circle>
-                                </svg>
-                                <div>
-                                    <p style="margin: 0; font-weight: 500;">Standort</p>
-                                    <p style="margin: 0; color: var(--text-gray);">Stuttgart, Deutschland</p>
-                                </div>
-                            </div>
-                        </div>
-                        <p style="margin-top: 2rem; color: var(--text-gray);">Oder nutze das Kontaktformular und ich melde mich schnellstmöglich bei dir.</p>
-                    </div>
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-Mail *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Unternehmen</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                        <div class="form-group">
-                            <label for="budget">Budget</label>
-                            <select id="budget" name="budget">
-                                <option value="">Budget auswählen</option>
-                                <option value="750-1500">750€ - 3.000€</option>
-                                <option value="1500-3000">3.000€ - 7.500€</option>
-                                <option value="5000+">7.500€+</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Projektbeschreibung *</label>
-                            <textarea id="message" name="message" required placeholder="Welches Design hast du dir vorgestellt? Was ist dir besonders wichtig? Wann können wir uns telefonisch abstimmen?"></textarea>
-                        </div>
-                        <button type="submit" class="btn" style="width: 100%;">Anfrage senden</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="images/logo.png" alt="ddesignpress">
-                    <p>Webdesign für Macher, nicht für Manager. Ehrlicher Code, durchdachtes Design.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="#home">Startseite</a></li>
-                        <li><a href="#services">Leistungen</a></li>
-                        <li><a href="#pricing">Preise</a></li>
-                        <li><a href="#showcase">Projekte</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Service</h4>
-                    <ul>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#contact">Kontakt</a></li>
-                        <li><a href="#about">Über uns</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Rechtliches</h4>
-                    <ul>
-                        <li><a href="impressum.html">Impressum</a></li>
-                        <li><a href="datenschutz.html">Datenschutz</a></li>
-                    </ul>
-                </div>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#hero">Start</a>
+                <a href="https://223890.hyla-germany.de/de" target="_blank">HYLA Shop</a>
+                <a href="https://instagram.com/cleanlifestylemum" target="_blank">Instagram</a>
+                <a href="Imda.html">Impressum</a>
+                <a href="Imda.html">Datenschutz</a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 ddesignpress UG (haftungsbeschränkt). Alle Rechte vorbehalten. | Feuerleinstraße 4, 70193 Stuttgart</p>
+            <div class="footer-info">
+                <p>&copy; 2024 Sabrina Wolf - HYLA Beratung Stuttgart. Alle Rechte vorbehalten.</p>
+                <p>Schloßstraße 73, 70176 Stuttgart</p>
             </div>
         </div>
     </footer>
 
-    <!-- Mobile Bottom Navigation -->
-    <nav class="mobile-bottom-nav">
-        <a href="#home" class="bottom-nav-item" data-section="home">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-            </svg>
-            <span>Home</span>
-        </a>
-        <a href="#services" class="bottom-nav-item" data-section="services">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-            </svg>
-            <span>Leistungen</span>
-        </a>
-        <a href="#showcase" class="bottom-nav-item" data-section="showcase">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="8" y1="21" x2="16" y2="21"></line>
-                <line x1="12" y1="17" x2="12" y2="21"></line>
-            </svg>
-            <span>Projekte</span>
-        </a>
-        <a href="#pricing" class="bottom-nav-item" data-section="pricing">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M9 14.5c0 1 1 2 3 2s3-1 3-2"></path>
-                <path d="M9 9.5C9 8.5 10 8 12 8s3 .5 3 1.5S14 11 12 11s-3 .5-3 1.5"></path>
-            </svg>
-            <span>Preise</span>
-        </a>
-        <a href="#contact" class="bottom-nav-item" data-section="contact">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-            <span>Kontakt</span>
-        </a>
-    </nav>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/4917620114358" class="whatsapp-button" target="_blank" aria-label="WhatsApp Chat öffnen">
+        <svg viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
 
-    <style>
-        /* Mobile Bottom Navigation - versteckt auf Desktop */
-        .mobile-bottom-nav {
-            display: none;
-        }
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
 
-        /* Nur auf echten mobilen Geräten anzeigen */
-        @media only screen and (max-width: 768px) {
-            /* Überprüfung ob Touch-Device */
-            @media (hover: none) and (pointer: coarse), (-webkit-touch-callout: default) {
-                .mobile-bottom-nav {
-                    display: flex;
-                    position: fixed;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    background: linear-gradient(to bottom, rgba(255, 244, 241, 0.95) 0%, rgba(255, 255, 255, 0.98) 100%);
-                    backdrop-filter: blur(10px);
-                    -webkit-backdrop-filter: blur(10px);
-                    box-shadow: 0 -2px 15px rgba(226, 206, 179, 0.2);
-                    z-index: 1000;
-                    padding: 0.625rem 0 0.75rem;
-                    border-top: 1px solid rgba(226, 206, 179, 0.3);
-                }
-
-                .bottom-nav-item {
-                    flex: 1;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 0.375rem 0;
-                    color: var(--text-gray);
-                    text-decoration: none;
-                    transition: all 0.2s ease;
-                    position: relative;
-                    -webkit-tap-highlight-color: transparent;
-                    touch-action: manipulation;
-                }
-
-                .bottom-nav-item svg {
-                    width: 22px;
-                    height: 22px;
-                    margin-bottom: 0.375rem;
-                    transition: all 0.2s ease;
-                    stroke: var(--text-gray);
-                }
-
-                .bottom-nav-item span {
-                    font-size: 0.6875rem;
-                    font-weight: 500;
-                    font-family: 'Inter Tight', sans-serif;
-                    letter-spacing: 0.01em;
-                    transition: all 0.2s ease;
-                }
-
-                .bottom-nav-item.active {
-                    color: var(--secondary-red);
-                }
-
-                .bottom-nav-item.active svg {
-                    stroke: var(--secondary-red);
-                    transform: scale(1.1);
-                }
-
-                .bottom-nav-item.active span {
-                    font-weight: 600;
-                    color: var(--secondary-red);
-                }
-
-                /* Eleganter aktiver Indikator oben */
-                .bottom-nav-item::before {
-                    content: '';
-                    position: absolute;
-                    top: -0.625rem;
-                    left: 50%;
-                    transform: translateX(-50%) scaleX(0);
-                    width: 28px;
-                    height: 3px;
-                    background: var(--secondary-red);
-                    border-radius: 0 0 3px 3px;
-                    transition: transform 0.3s ease;
-                }
-
-                .bottom-nav-item.active::before {
-                    transform: translateX(-50%) scaleX(1);
-                }
-
-                /* Touch feedback */
-                .bottom-nav-item:active {
-                    transform: scale(0.95);
-                }
-
-                /* Anpassungen für mobile Ansicht */
-                main {
-                    padding-bottom: 75px;
-                }
-
-                footer {
-                    margin-bottom: 70px;
-                }
-
-                .nav-wrapper {
-                    display: none !important;
-                }
-
-                .floating-cta {
-                    display: none !important;
-                }
-
-                /* Header vereinfachen auf Mobile */
-                header nav {
-                    justify-content: center;
-                }
+            // Animate burger menu
+            const spans = mobileMenuToggle.querySelectorAll('span');
+            if (navMenu.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            } else {
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = '';
             }
-        }
+        });
 
-        /* Fallback für iOS Geräte */
-        @supports (-webkit-touch-callout: default) {
-            @media only screen and (max-width: 768px) {
-                .mobile-bottom-nav {
-                    display: flex !important;
+        // Smooth Scroll & Close Mobile Menu
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu
+                    navMenu.classList.remove('active');
+                    const spans = mobileMenuToggle.querySelectorAll('span');
+                    spans[0].style.transform = '';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = '';
                 }
+            });
+        });
+
+        // FAQ Toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Contact Form Submit
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+
+            // Visual feedback
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Wird gesendet...';
+            submitButton.disabled = true;
+
+            // Simulate sending
+            setTimeout(() => {
+                alert('Vielen Dank für deine Nachricht! Ich melde mich schnellstmöglich bei dir. 💕');
+                contactForm.reset();
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            }, 1500);
+        });
+
+        // Header scroll effect
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 1px 0 rgba(0, 0, 0, 0.05)';
             }
-        }
-    </style>
+
+            lastScroll = currentScroll;
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-on-scroll');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.feature-card, .story-text, .about-content, .benefit-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Active navigation highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.color = '';
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.style.color = 'var(--color-accent)';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

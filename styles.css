@@ -285,6 +285,10 @@ nav {
     color: var(--secondary-red);
 }
 
+.highlight-d {
+    color: var(--secondary-red);
+}
+
 .hero .subline {
     font-size: 1.125rem;
     color: var(--text-gray);
