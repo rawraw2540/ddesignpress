@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="Datenschutzerklärung | ddesignpress">
-    <meta name="description" content="Datenschutzerklärung der ddesignpress UG - Webdesign für Macher">
+    <meta name="description" content="Datenschutzerklärung von ddesignpress - Webdesign für Selbstständige und KMU">
     <meta name="robots" content="index, follow">
     <meta name="language" content="de">
 
@@ -12,216 +12,6 @@
 
     <!-- CSS einbinden -->
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        /* Logo-Fix für Datenschutz-Seite */
-
-        .footer-brand img {
-            max-height: 40px !important;
-            height: auto !important;
-        }
-
-        .legal-content {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: var(--white);
-            padding: 3rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .legal-content h1 {
-            margin-bottom: 3rem;
-        }
-
-        .legal-content h2 {
-            font-size: 1.5rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .legal-content h3 {
-            font-size: 1.25rem;
-            margin-top: 2rem;
-            margin-bottom: 0.75rem;
-            color: var(--text-dark);
-        }
-
-        .legal-content h4 {
-            font-size: 1.1rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-        }
-
-        .legal-content p,
-        .legal-content li {
-            color: var(--text-gray);
-            line-height: 1.8;
-        }
-
-        .legal-content ul {
-            padding-left: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .legal-content a {
-            color: var(--secondary-turquoise);
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            color: var(--secondary-turquoise);
-            font-weight: 500;
-        }
-
-        .back-link:hover {
-            opacity: 0.8;
-        }
-
-        .info-box {
-            background-color: var(--gray-light);
-            padding: 1.5rem;
-            border-radius: var(--border-radius-sm);
-            margin: 1.5rem 0;
-            border-left: 4px solid var(--secondary-turquoise);
-        }
-
-        @media (max-width: 768px) {
-            .legal-content {
-                padding: 2rem;
-            }
-        }
-
-        /* Mobile Bottom Navigation - versteckt auf Desktop */
-        .mobile-bottom-nav {
-            display: none;
-        }
-
-        /* Nur auf echten mobilen Geräten anzeigen */
-        @media only screen and (max-width: 768px) {
-            /* Überprüfung ob Touch-Device */
-            @media (hover: none) and (pointer: coarse), (-webkit-touch-callout: default) {
-                .mobile-bottom-nav {
-                    display: flex;
-                    position: fixed;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    background: linear-gradient(to bottom, rgba(255, 244, 241, 0.95) 0%, rgba(255, 255, 255, 0.98) 100%);
-                    backdrop-filter: blur(10px);
-                    -webkit-backdrop-filter: blur(10px);
-                    box-shadow: 0 -2px 15px rgba(226, 206, 179, 0.2);
-                    z-index: 1000;
-                    padding: 0.625rem 0 0.75rem;
-                    border-top: 1px solid rgba(226, 206, 179, 0.3);
-                }
-
-                .bottom-nav-item {
-                    flex: 1;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 0.375rem 0;
-                    color: var(--text-gray);
-                    text-decoration: none;
-                    transition: all 0.2s ease;
-                    position: relative;
-                    -webkit-tap-highlight-color: transparent;
-                    touch-action: manipulation;
-                }
-
-                .bottom-nav-item svg {
-                    width: 22px;
-                    height: 22px;
-                    margin-bottom: 0.375rem;
-                    transition: all 0.2s ease;
-                    stroke: var(--text-gray);
-                }
-
-                .bottom-nav-item span {
-                    font-size: 0.6875rem;
-                    font-weight: 500;
-                    font-family: 'Inter Tight', sans-serif;
-                    letter-spacing: 0.01em;
-                    transition: all 0.2s ease;
-                }
-
-                .bottom-nav-item.active {
-                    color: var(--secondary-red);
-                }
-
-                .bottom-nav-item.active svg {
-                    stroke: var(--secondary-red);
-                    transform: scale(1.1);
-                }
-
-                .bottom-nav-item.active span {
-                    font-weight: 600;
-                    color: var(--secondary-red);
-                }
-
-                /* Eleganter aktiver Indikator oben */
-                .bottom-nav-item::before {
-                    content: '';
-                    position: absolute;
-                    top: -0.625rem;
-                    left: 50%;
-                    transform: translateX(-50%) scaleX(0);
-                    width: 28px;
-                    height: 3px;
-                    background: var(--secondary-red);
-                    border-radius: 0 0 3px 3px;
-                    transition: transform 0.3s ease;
-                }
-
-                .bottom-nav-item.active::before {
-                    transform: translateX(-50%) scaleX(1);
-                }
-
-                /* Touch feedback */
-                .bottom-nav-item:active {
-                    transform: scale(0.95);
-                }
-
-                /* Anpassungen für mobile Ansicht */
-                main {
-                    padding-bottom: 75px;
-                }
-
-                footer {
-                    margin-bottom: 70px;
-                }
-
-                .nav-wrapper {
-                    display: none !important;
-                }
-
-                .floating-cta {
-                    display: none !important;
-                }
-
-                /* Header vereinfachen auf Mobile */
-                header nav {
-                    justify-content: center;
-                }
-            }
-        }
-
-        /* Fallback für iOS Geräte */
-        @supports (-webkit-touch-callout: default) {
-            @media only screen and (max-width: 768px) {
-                .mobile-bottom-nav {
-                    display: flex !important;
-                }
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Skip to content for accessibility -->
@@ -237,7 +27,6 @@
             </div>
             <div class="nav-wrapper">
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Startseite</a></li>
                     <li><a href="index.html#services" class="nav-link">Leistungen</a></li>
                     <li><a href="index.html#showcase" class="nav-link">Projekte</a></li>
                     <li><a href="index.html#pricing" class="nav-link">Preise</a></li>
@@ -251,236 +40,187 @@
 
     <!-- Main Content -->
     <main id="main">
-        <section class="section" style="padding-top: 120px; background-color: var(--gray-light);">
+        <section class="section content-section">
             <div class="container">
+                <a href="index.html" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    Zurück zur Startseite
+                </a>
+                
                 <div class="legal-content">
-                    <a href="index.html" class="back-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="19" y1="12" x2="5" y2="12"></line>
-                            <polyline points="12 19 5 12 12 5"></polyline>
-                        </svg>
-                        Zurück zur Startseite
-                    </a>
-
                     <h1>Datenschutzerklärung</h1>
-
-                    <div class="info-box">
-                        <p><strong>Stand: Januar 2025</strong></p>
-                        <p>Wir bei ddesignpress nehmen den Schutz deiner persönlichen Daten ernst. Diese Datenschutzerklärung informiert dich darüber, wie wir mit deinen Daten umgehen.</p>
-                    </div>
-
-                    <h2>1. Verantwortlicher</h2>
+                    
+                    <h2>1. Datenschutz auf einen Blick</h2>
+                    
+                    <h3>Allgemeine Hinweise</h3>
                     <p>
-                        Verantwortlicher für die Datenverarbeitung auf dieser Website ist:<br><br>
-                        <strong>ddesignpress UG (haftungsbeschränkt)</strong><br>
+                        Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren 
+                        personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene 
+                        Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+                    </p>
+
+                    <h3>Datenerfassung auf dieser Website</h3>
+                    <p>
+                        <strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br>
+                        Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen 
+                        Kontaktdaten können Sie dem Impressum dieser Website entnehmen.
+                    </p>
+                    <p>
+                        <strong>Wie erfassen wir Ihre Daten?</strong><br>
+                        Ihre Daten werden ausschließlich dadurch erhoben, dass Sie uns diese mitteilen. 
+                        Hierbei handelt es sich um Daten, die Sie in unser Kontaktformular eingeben.
+                    </p>
+                    <p>
+                        <strong>Wofür nutzen wir Ihre Daten?</strong><br>
+                        Die Daten werden ausschließlich dazu verwendet, Ihre Anfrage zu bearbeiten.
+                    </p>
+                    <p>
+                        <strong>Welche Rechte haben Sie bezüglich Ihrer Daten?</strong><br>
+                        Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und 
+                        Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem 
+                        ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Hierzu sowie 
+                        zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.
+                    </p>
+
+                    <h2>2. Hosting</h2>
+                    <p>
+                        Diese Website wird bei GitHub Pages gehostet. GitHub Pages ist ein Service der 
+                        GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA.
+                    </p>
+                    <p>
+                        GitHub kann beim Aufruf dieser Website technische Daten wie IP-Adressen in 
+                        Server-Log-Dateien speichern. Weitere Informationen zum Umgang mit Nutzerdaten 
+                        finden Sie in der Datenschutzerklärung von GitHub: 
+                        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">
+                            https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement
+                        </a>
+                    </p>
+
+                    <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
+                    
+                    <h3>Datenschutz</h3>
+                    <p>
+                        Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. 
+                        Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den 
+                        gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+                    </p>
+
+                    <h3>Hinweis zur verantwortlichen Stelle</h3>
+                    <p>
+                        Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
+                    </p>
+                    <p>
                         Daniel Dörrer<br>
+                        ddesignpress<br>
                         Feuerleinstraße 4<br>
                         70193 Stuttgart<br>
-                        Deutschland<br><br>
-                        E-Mail: <a href="mailto:daniel.doerrer@gmail.com">daniel.doerrer@gmail.com</a><br>
-                        Telefon: <a href="tel:+4917630171028">+49 176 30171028</a>
-                    </p>
-
-                    <h2>2. Übersicht der Verarbeitungen</h2>
-                    <p>
-                        Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer
-                        Verarbeitung zusammen und verweist auf die betroffenen Personen.
-                    </p>
-
-                    <h3>Arten der verarbeiteten Daten</h3>
-                    <ul>
-                        <li>Kontaktdaten (z.B. Name, E-Mail, Telefonnummer)</li>
-                        <li>Inhaltsdaten (z.B. Eingaben in Kontaktformularen)</li>
-                        <li>Nutzungsdaten (z.B. besuchte Webseiten, Zugriffzeiten)</li>
-                        <li>Meta-/Kommunikationsdaten (z.B. Geräte-Informationen, IP-Adressen)</li>
-                    </ul>
-
-                    <h3>Kategorien betroffener Personen</h3>
-                    <ul>
-                        <li>Besucher und Nutzer der Website</li>
-                        <li>Geschäfts- und Vertragspartner</li>
-                        <li>Interessenten</li>
-                    </ul>
-
-                    <h3>Zwecke der Verarbeitung</h3>
-                    <ul>
-                        <li>Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit</li>
-                        <li>Kontaktanfragen und Kommunikation</li>
-                        <li>Sicherheitsmaßnahmen</li>
-                        <li>Verwaltung und Beantwortung von Anfragen</li>
-                    </ul>
-
-                    <h2>3. Rechtsgrundlagen</h2>
-                    <p>
-                        Die Rechtsgrundlagen für die Verarbeitung ergeben sich aus der DSGVO:
-                    </p>
-                    <ul>
-                        <li><strong>Einwilligung</strong> (Art. 6 Abs. 1 lit. a DSGVO)</li>
-                        <li><strong>Vertragserfüllung und vorvertragliche Anfragen</strong> (Art. 6 Abs. 1 lit. b DSGVO)</li>
-                        <li><strong>Berechtigte Interessen</strong> (Art. 6 Abs. 1 lit. f DSGVO)</li>
-                    </ul>
-
-                    <h2>4. Sicherheitsmaßnahmen</h2>
-                    <p>
-                        Wir treffen nach Maßgabe der gesetzlichen Vorgaben technische und organisatorische
-                        Maßnahmen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten.
+                        <br>
+                        Telefon: +49 176 30171028<br>
+                        E-Mail: daniel.doerrer@gmail.com
                     </p>
                     <p>
-                        Zu den Maßnahmen gehören insbesondere:
+                        Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder 
+                        gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen 
+                        Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
                     </p>
-                    <ul>
-                        <li>SSL-/TLS-Verschlüsselung der Website</li>
-                        <li>Regelmäßige Sicherheitsupdates</li>
-                        <li>Zugriffskontrolle</li>
-                        <li>Regelmäßige Backups</li>
-                    </ul>
 
-                    <h2>5. Übermittlung von Daten</h2>
+                    <h3>Speicherdauer</h3>
                     <p>
-                        Eine Übermittlung deiner persönlichen Daten an Dritte zu anderen als den im Folgenden
-                        aufgeführten Zwecken findet nicht statt. Wir geben deine persönlichen Daten nur an
-                        Dritte weiter, wenn:
+                        Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt 
+                        wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die 
+                        Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen 
+                        oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, 
+                        sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer 
+                        personenbezogenen Daten haben (z. B. steuer- oder handelsrechtliche 
+                        Aufbewahrungsfristen).
                     </p>
-                    <ul>
-                        <li>du deine ausdrückliche Einwilligung dazu erteilt hast,</li>
-                        <li>die Verarbeitung zur Erfüllung eines Vertrags erforderlich ist,</li>
-                        <li>die Verarbeitung zur Erfüllung einer rechtlichen Verpflichtung erforderlich ist,</li>
-                        <li>die Verarbeitung zur Wahrung berechtigter Interessen erforderlich ist.</li>
-                    </ul>
 
-                    <h2>6. Cookies</h2>
-                    <div class="info-box">
-                        <p><strong>Wichtig:</strong> Unsere Website verwendet KEINE Cookies! Wir setzen weder
-                        technisch notwendige noch Marketing-Cookies ein. Deine Privatsphäre ist uns wichtig.</p>
-                    </div>
-
-                    <h2>7. Bereitstellung der Website</h2>
+                    <h3>SSL- bzw. TLS-Verschlüsselung</h3>
                     <p>
-                        Bei der rein informativen Nutzung der Website, also wenn du dich nicht registrierst
-                        oder uns anderweitig Informationen übermittelst, erheben wir nur die personenbezogenen
-                        Daten, die dein Browser an unseren Server übermittelt. Diese sind:
+                        Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher 
+                        Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen 
+                        Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt 
+                        und an dem Schloss-Symbol in Ihrer Browserzeile.
+                    </p>
+
+                    <h2>4. Datenerfassung auf dieser Website</h2>
+
+                    <h3>Cookies</h3>
+                    <p>
+                        Diese Website verwendet keine Cookies.
+                    </p>
+
+                    <h3>Kontaktformular</h3>
+                    <p>
+                        Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, öffnet sich Ihr 
+                        E-Mail-Programm mit den von Ihnen eingegebenen Daten. Diese Website selbst 
+                        speichert oder verarbeitet keine Formulardaten. Die Datenübertragung erfolgt 
+                        ausschließlich über Ihr E-Mail-Programm.
+                    </p>
+                    <p>
+                        Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt 
+                        ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). 
+                        Sie können diese Einwilligung jederzeit widerrufen.
+                    </p>
+
+                    <h3>Anfrage per E-Mail oder Telefon</h3>
+                    <p>
+                        Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive 
+                        aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke 
+                        der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten 
+                        geben wir nicht ohne Ihre Einwilligung weiter.
+                    </p>
+
+                    <h2>5. Plugins und Tools</h2>
+
+                    <h3>WhatsApp-Button</h3>
+                    <p>
+                        Auf unserer Website befindet sich ein Button, der zu WhatsApp weiterleitet. Wenn 
+                        Sie diesen Button anklicken, werden Sie zu WhatsApp weitergeleitet. WhatsApp ist 
+                        ein Dienst der Meta Platforms Ireland Limited, 4 Grand Canal Square, Grand Canal 
+                        Harbour, Dublin 2, Irland.
+                    </p>
+                    <p>
+                        Erst beim Klick auf den Button wird eine Verbindung zu WhatsApp hergestellt. 
+                        Dabei kann WhatsApp Ihre IP-Adresse und andere Informationen erfassen. Weitere 
+                        Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung 
+                        von WhatsApp unter: 
+                        <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">
+                            https://www.whatsapp.com/legal/privacy-policy
+                        </a>
+                    </p>
+
+                    <h2>6. Ihre Rechte</h2>
+                    <p>
+                        Sie haben folgende Rechte hinsichtlich Ihrer personenbezogenen Daten:
                     </p>
                     <ul>
-                        <li>IP-Adresse</li>
-                        <li>Datum und Uhrzeit der Anfrage</li>
-                        <li>Zeitzonendifferenz zur Greenwich Mean Time (GMT)</li>
-                        <li>Inhalt der Anforderung (konkrete Seite)</li>
-                        <li>Zugriffsstatus/HTTP-Statuscode</li>
-                        <li>jeweils übertragene Datenmenge</li>
-                        <li>Website, von der die Anforderung kommt</li>
-                        <li>Browser</li>
-                        <li>Betriebssystem und dessen Oberfläche</li>
-                        <li>Sprache und Version der Browsersoftware</li>
+                        <li>Recht auf Auskunft</li>
+                        <li>Recht auf Berichtigung</li>
+                        <li>Recht auf Löschung („Recht auf Vergessenwerden")</li>
+                        <li>Recht auf Einschränkung der Verarbeitung</li>
+                        <li>Recht auf Datenübertragbarkeit</li>
+                        <li>Widerspruchsrecht</li>
+                        <li>Recht auf Widerruf einer datenschutzrechtlichen Einwilligung</li>
                     </ul>
-
-                    <h2>8. Kontaktformular und E-Mail-Kontakt</h2>
                     <p>
-                        Wenn du uns per Kontaktformular oder E-Mail kontaktierst, werden deine Angaben aus
-                        dem Formular inklusive der von dir dort angegebenen Kontaktdaten zwecks Bearbeitung
-                        der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.
-                    </p>
-                    <p>
-                        Diese Daten geben wir nicht ohne deine Einwilligung weiter. Die Verarbeitung erfolgt
-                        auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern deine Anfrage mit der Erfüllung
-                        eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen
-                        erforderlich ist.
+                        Zur Ausübung dieser Rechte können Sie sich jederzeit an uns wenden. Zudem haben 
+                        Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.
                     </p>
 
-                    <h2>9. Löschung von Daten</h2>
+                    <h2>7. Widerspruch gegen Werbe-E-Mails</h2>
                     <p>
-                        Die von uns verarbeiteten Daten werden nach Maßgabe der gesetzlichen Vorgaben gelöscht,
-                        sobald deren zur Verarbeitung erlaubten Einwilligungen widerrufen werden oder sonstige
-                        Erlaubnisse entfallen.
-                    </p>
-                    <p>
-                        Sofern die Daten nicht gelöscht werden, weil sie für andere und gesetzlich zulässige
-                        Zwecke erforderlich sind, wird deren Verarbeitung auf diese Zwecke beschränkt.
+                        Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur 
+                        Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien 
+                        wird hiermit widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich 
+                        rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, 
+                        etwa durch Spam-E-Mails, vor.
                     </p>
 
-                    <h2>10. Deine Rechte</h2>
-                    <p>Du hast gegenüber uns folgende Rechte hinsichtlich der dich betreffenden personenbezogenen Daten:</p>
-
-                    <h3>Recht auf Auskunft</h3>
-                    <p>
-                        Du hast das Recht, eine Bestätigung darüber zu verlangen, ob personenbezogene Daten
-                        verarbeitet werden und auf Auskunft über diese Daten sowie auf weitere Informationen
-                        und Kopie der Daten.
-                    </p>
-
-                    <h3>Recht auf Berichtigung</h3>
-                    <p>
-                        Du hast das Recht, die Berichtigung dich betreffender unrichtiger oder die
-                        Vervollständigung unvollständiger personenbezogener Daten zu verlangen.
-                    </p>
-
-                    <h3>Recht auf Löschung</h3>
-                    <p>
-                        Du hast das Recht, die unverzügliche Löschung dich betreffender personenbezogener
-                        Daten zu verlangen, sofern einer der gesetzlichen Gründe zutrifft und soweit die
-                        Verarbeitung nicht erforderlich ist.
-                    </p>
-
-                    <h3>Recht auf Einschränkung der Verarbeitung</h3>
-                    <p>
-                        Du hast das Recht, die Einschränkung der Verarbeitung zu verlangen, wenn eine der
-                        gesetzlichen Voraussetzungen gegeben ist.
-                    </p>
-
-                    <h3>Recht auf Datenübertragbarkeit</h3>
-                    <p>
-                        Du hast das Recht, die dich betreffenden personenbezogenen Daten in einem
-                        strukturierten, gängigen und maschinenlesbaren Format zu erhalten.
-                    </p>
-
-                    <h3>Recht auf Widerspruch</h3>
-                    <div class="info-box">
-                        <p>
-                            <strong>Du hast das Recht, aus Gründen, die sich aus deiner besonderen Situation
-                            ergeben, jederzeit gegen die Verarbeitung dich betreffender personenbezogener Daten
-                            Widerspruch einzulegen.</strong>
-                        </p>
-                    </div>
-
-                    <h3>Recht auf Widerruf der Einwilligung</h3>
-                    <p>
-                        Du hast das Recht, deine Einwilligung jederzeit zu widerrufen. Die Rechtmäßigkeit der
-                        aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung wird dadurch nicht
-                        berührt.
-                    </p>
-
-                    <h3>Beschwerderecht bei einer Aufsichtsbehörde</h3>
-                    <p>
-                        Du hast das Recht auf Beschwerde bei einer Aufsichtsbehörde, insbesondere in dem
-                        Mitgliedstaat deines Aufenthaltsorts, deines Arbeitsplatzes oder des Orts des
-                        mutmaßlichen Verstoßes.
-                    </p>
-
-                    <h2>11. Keine automatisierte Entscheidungsfindung</h2>
-                    <p>
-                        Wir verwenden keine automatisierte Entscheidungsfindung einschließlich Profiling
-                        gemäß Art. 22 DSGVO.
-                    </p>
-
-                    <h2>12. SSL-Verschlüsselung</h2>
-                    <p>
-                        Diese Seite nutzt aus Gründen der Sicherheit und zum Schutz der Übertragung
-                        vertraulicher Inhalte eine SSL-Verschlüsselung. Eine verschlüsselte Verbindung
-                        erkennst du daran, dass die Adresszeile des Browsers von "http://" auf "https://"
-                        wechselt und an dem Schloss-Symbol in deiner Browserzeile.
-                    </p>
-
-                    <h2>13. Änderung der Datenschutzerklärung</h2>
-                    <p>
-                        Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den
-                        aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen
-                        in der Datenschutzerklärung umzusetzen. Für deinen erneuten Besuch gilt dann die
-                        neue Datenschutzerklärung.
-                    </p>
-
-                    <h2>14. Fragen zum Datenschutz</h2>
-                    <p>
-                        Wenn du Fragen zum Datenschutz hast, schreib uns bitte eine E-Mail an:
-                        <a href="mailto:daniel.doerrer@gmail.com">daniel.doerrer@gmail.com</a>
+                    <p style="margin-top: 3rem; font-style: italic; color: var(--text-gray);">
+                        Stand: Januar 2025
                     </p>
                 </div>
             </div>
@@ -501,7 +241,7 @@
                         <li><a href="index.html">Startseite</a></li>
                         <li><a href="index.html#services">Leistungen</a></li>
                         <li><a href="index.html#pricing">Preise</a></li>
-                        <li><a href="index.html#showcase">Showcase</a></li>
+                        <li><a href="index.html#showcase">Projekte</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -516,55 +256,15 @@
                     <h4>Rechtliches</h4>
                     <ul>
                         <li><a href="impressum.html">Impressum</a></li>
-                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                        <li><a href="datenschutz.html" class="active">Datenschutz</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 ddesignpress UG (haftungsbeschränkt). Alle Rechte vorbehalten. | Feuerleinstraße 4, 70193 Stuttgart</p>
+                <p>&copy; 2025 ddesignpress . Alle Rechte vorbehalten. | Feuerleinstraße 4, 70193 Stuttgart</p>
             </div>
         </div>
     </footer>
-
-    <!-- Mobile Bottom Navigation -->
-    <nav class="mobile-bottom-nav">
-        <a href="index.html#home" class="bottom-nav-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-            </svg>
-            <span>Home</span>
-        </a>
-        <a href="index.html#services" class="bottom-nav-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-            </svg>
-            <span>Leistungen</span>
-        </a>
-        <a href="index.html#showcase" class="bottom-nav-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="8" y1="21" x2="16" y2="21"></line>
-                <line x1="12" y1="17" x2="12" y2="21"></line>
-            </svg>
-            <span>Projekte</span>
-        </a>
-        <a href="index.html#pricing" class="bottom-nav-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M9 14.5c0 1 1 2 3 2s3-1 3-2"></path>
-                <path d="M9 9.5C9 8.5 10 8 12 8s3 .5 3 1.5S14 11 12 11s-3 .5-3 1.5"></path>
-            </svg>
-            <span>Preise</span>
-        </a>
-        <a href="index.html#contact" class="bottom-nav-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-            <span>Kontakt</span>
-        </a>
-    </nav>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
